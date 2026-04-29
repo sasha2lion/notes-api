@@ -24,3 +24,6 @@ def success(data):
 
 def error(msg):
     return {"status": "error", "message": msg}
+if method == "GET" and path.startswith("/search"):
+    q = path.split("=")[-1]
+    return success(search_notes(q))
