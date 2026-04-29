@@ -38,3 +38,5 @@ def clear():
 def get_notes_sorted():
     return sorted(notes, key=lambda x: x["id"])
 return success(get_notes_sorted())
+def search_notes(query):
+    return [n for n in notes if query.lower() in n["text"].lower()]
