@@ -16,8 +16,11 @@ def get_notes():
 def update_note(id, text):
     for n in notes:
         if n["id"] == id:
-            n["text"] = text
+            if not text:
+                return {"error": "Invalid text"}
+            n["text"] = text.strip()
             return n
+    return {"error": "Note not found"}
 
 def delete_note(id):
     global notes
