@@ -8,3 +8,4 @@ def create_note(id, text):
     }
 if len(text) > 200:
     return None
+text = text.strip()
