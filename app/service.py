@@ -1,7 +1,12 @@
 notes = []
 
 def add_note(text):
-    note = {"id": len(notes) + 1, "text": text}
+    from app.models import create_note
+
+note = create_note(len(notes) + 1, text)
+
+if not note:
+    return {"error": "Invalid data"}
     notes.append(note)
     return note
 
