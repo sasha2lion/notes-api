@@ -40,3 +40,4 @@ def get_notes_sorted():
 return success(get_notes_sorted())
 def search_notes(query):
     return [n for n in notes if query.lower() in n["text"].lower()]
+"""note"""
