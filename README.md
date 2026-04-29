@@ -8,3 +8,10 @@ This project simulates a backend API for managing notes.
 - Get all notes
 - Update note
 - Delete note
+
+## Example
+
+POST /notes  
+GET /notes  
+PUT /notes/1  
+DELETE /notes/1
