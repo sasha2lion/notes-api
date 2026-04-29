@@ -17,7 +17,7 @@ def handle_request(method, path, data=None):
         id = int(path.split("/")[-1])
         return delete_note(id)
 
-    return {"error": "Route not found"}
+return error("Route not found")
 
 def success(data):
     return {"status": "ok", "data": data}
