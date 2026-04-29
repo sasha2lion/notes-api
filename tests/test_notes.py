@@ -16,3 +16,6 @@ def test_delete():
     add_note("Test")
     delete_note(1)
     assert len(get_notes()) == 0
+def test_empty():
+    clear()
+    assert get_notes() == []
