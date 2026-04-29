@@ -2,9 +2,9 @@ notes = []
 
 def add_note(text):
     from app.models import create_note
+import time
 
-note = create_note(len(notes) + 1, text)
-
+note["created"] = int(time.time())
 if not note:
     return {"error": "Invalid data"}
     notes.append(note)
