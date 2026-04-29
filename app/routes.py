@@ -2,16 +2,16 @@ from app.service import add_note, get_notes, update_note, delete_note
 
 def handle_request(method, path, data=None):
     if method == "GET" and path == "/notes":
-        return {"data": get_notes()}
+       return success(get_notes())
 
     if method == "POST" and path == "/notes":
         result = add_note(data.get("text") if data else None)
-        return {"data": result}
+        return success(get_notes())
 
     if method == "PUT" and path.startswith("/notes/"):
         id = int(path.split("/")[-1])
         result = update_note(id, data.get("text") if data else None)
-        return {"data": result}
+       return success(get_notes())
 
     if method == "DELETE" and path.startswith("/notes/"):
         id = int(path.split("/")[-1])
