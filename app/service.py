@@ -7,3 +7,9 @@ def add_note(text):
 
 def get_notes():
     return notes
+
+def update_note(id, text):
+    for n in notes:
+        if n["id"] == id:
+            n["text"] = text
+            return n
