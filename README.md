@@ -1,6 +1,6 @@
 # Notes API (Simulation)
 
-This project simulates a backend API for managing notes.
+Backend-style API for managing notes.
 
 ## Features
 
@@ -8,13 +8,24 @@ This project simulates a backend API for managing notes.
 - Get all notes
 - Update note
 - Delete note
+- Input validation
+- Error handling
 
-## Example
+## API Example
 
 POST /notes  
 GET /notes  
 PUT /notes/1  
-DELETE /notes/1
+DELETE /notes/1  
+
+## Example Response
+
+{
+  "data": {
+    "id": 1,
+    "text": "Hello"
+  }
+}
 
 ## Structure
 
@@ -22,3 +33,11 @@ app/
   models.py
   service.py
   routes.py
+
+tests/
+
+## Tech
+
+- Python
+- API simulation
+- Modular architecture
