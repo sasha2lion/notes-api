@@ -41,3 +41,8 @@ tests/
 - Python
 - API simulation
 - Modular architecture
+
+
+## Status
+
+Learning project demonstrating backend concepts.
