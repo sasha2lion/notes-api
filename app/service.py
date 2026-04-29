@@ -21,7 +21,7 @@ def update_note(id, text):
             n["text"] = text.strip()
             return n
     return {"error": "Note not found"}
-
+n["updated"] = int(time.time())
 def delete_note(id):
     global notes
     before = len(notes)
