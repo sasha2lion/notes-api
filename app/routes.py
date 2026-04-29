@@ -21,3 +21,6 @@ def handle_request(method, path, data=None):
 
 def success(data):
     return {"status": "ok", "data": data}
+
+def error(msg):
+    return {"status": "error", "message": msg}
