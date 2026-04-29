@@ -13,3 +13,7 @@ def update_note(id, text):
         if n["id"] == id:
             n["text"] = text
             return n
+
+def delete_note(id):
+    global notes
+    notes = [n for n in notes if n["id"] != id]
