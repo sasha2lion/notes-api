@@ -6,3 +6,5 @@ def create_note(id, text):
         "id": id,
         "text": text.strip()
     }
+if len(text) > 200:
+    return None
