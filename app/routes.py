@@ -27,3 +27,7 @@ def error(msg):
 if method == "GET" and path.startswith("/search"):
     q = path.split("=")[-1]
     return success(search_notes(q))
+try:
+    id = int(path.split("/")[-1])
+except:
+    return error("Invalid ID")
