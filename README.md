@@ -15,3 +15,10 @@ POST /notes
 GET /notes  
 PUT /notes/1  
 DELETE /notes/1
+
+## Structure
+
+app/
+  models.py
+  service.py
+  routes.py
