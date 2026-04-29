@@ -46,3 +46,7 @@ tests/
 ## Status
 
 Learning project demonstrating backend concepts.
+
+## Search
+
+GET /search?q=text
