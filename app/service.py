@@ -31,3 +31,6 @@ def delete_note(id):
         return {"error": "Note not found"}
 
     return {"status": "deleted"}
+def clear():
+    global notes
+    notes = []
