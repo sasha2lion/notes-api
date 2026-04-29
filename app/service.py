@@ -24,4 +24,10 @@ def update_note(id, text):
 
 def delete_note(id):
     global notes
+    before = len(notes)
     notes = [n for n in notes if n["id"] != id]
+
+    if len(notes) == before:
+        return {"error": "Note not found"}
+
+    return {"status": "deleted"}
