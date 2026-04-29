@@ -18,3 +18,6 @@ def handle_request(method, path, data=None):
         return delete_note(id)
 
     return {"error": "Route not found"}
+
+def success(data):
+    return {"status": "ok", "data": data}
