@@ -37,3 +37,4 @@ def clear():
 
 def get_notes_sorted():
     return sorted(notes, key=lambda x: x["id"])
+return success(get_notes_sorted())
