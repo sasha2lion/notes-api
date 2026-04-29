@@ -2,18 +2,19 @@ from app.service import add_note, get_notes, update_note, delete_note
 
 def handle_request(method, path, data=None):
     if method == "GET" and path == "/notes":
-        return get_notes()
+        return {"data": get_notes()}
 
     if method == "POST" and path == "/notes":
-        return add_note(data["text"])
+        result = add_note(data.get("text") if data else None)
+        return {"data": result}
 
     if method == "PUT" and path.startswith("/notes/"):
         id = int(path.split("/")[-1])
-        return update_note(id, data["text"])
+        result = update_note(id, data.get("text") if data else None)
+        return {"data": result}
 
     if method == "DELETE" and path.startswith("/notes/"):
         id = int(path.split("/")[-1])
-        delete_note(id)
-        return {"status": "deleted"}
+        return delete_note(id)
 
-    return {"error": "not found"}
+    return {"error": "Route not found"}
